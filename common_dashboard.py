@@ -49,17 +49,17 @@ app.layout = html.Div([
             #parent_className='custom-tabs',
             #className='custom-tabs-container',
             #20B2AA
-            style={"height":"20",'textAlign': 'center','color': '#FA8072','fontWeight':'bold','cursor': 'pointer','align-items': 'center','justify-content': 'center','fontSize': 20},
+            style={"height":"20",'textAlign': 'center','color': '#000000','fontWeight':'bold','cursor': 'pointer','align-items': 'center','justify-content': 'center','fontSize': 20},
             #style=tabs_styles,
             children=[
-                dcc.Tab(label="BSS", value="bss_tab",selected_style={'color': '#FFE4E1','backgroundColor': '#FA8072','fontWeight':'bold',"border": "#A52A2A"}),
-                dcc.Tab(label="OSS", value="oss_tab",selected_style={'color': '#FFE4E1','backgroundColor': '#FA8072','fontWeight':'bold',"border": "#A52A2A"}),
+                dcc.Tab(label="BSS", value="bss_tab",selected_style={'color': '#FFFFFF','backgroundColor': '#7F8C8D','fontWeight':'bold',"border": "#A52A2A"}),
+                dcc.Tab(label="OSS", value="oss_tab",selected_style={'color': '#FFFFFF','backgroundColor': '#7F8C8D','fontWeight':'bold',"border": "#A52A2A"}),
                 ],
             value="bss_tab",
             colors={
                 "border": "#FFFFFF",
                 "primary": "#F5F5DC",
-                "background": "#FFE4E1"
+                "background": "#A6ACAF"
                 }
             #vertical="vertical",
             )],style={'textAlign':'center'}
@@ -74,25 +74,25 @@ bss_layout=html.Div([
         html.Br(),
         html.Button(id='cdc',
                     n_clicks=0, children = html.A('Code Consolidation & De-Consolidation',href='/cdc/',style={'color':'#000000','fontSize':18,'fontWeight':'bold'}),
-                    style={'padding-top':'5px','padding-bottom':'5px','color':'#8B008B','backgroundColor':'#F0FFF0','width':'300px','borderRadius':'4px'}),
+                    style={'padding-top':'5px','padding-bottom':'5px','color':'#8B008B','backgroundColor':'#F8C471','width':'300px','borderRadius':'4px'}),
         html.Br(),
         html.Br(),
         html.Br(),
         html.Button(id='dc',
                     n_clicks=0, children = html.A('Dependency Check',href='/dependency_check',style={'color':'#000000','fontSize':18,'fontWeight':'bold'}),
-                    style={'padding-top':'5px','padding-bottom':'5px','color':'#00FA9A','backgroundColor':'#F0FFF0','width':'300px','borderRadius':'4px'}),
+                    style={'padding-top':'5px','padding-bottom':'5px','color':'#00FA9A','backgroundColor':'#F8C471','width':'300px','borderRadius':'4px'}),
        # html.Br(),
        # html.Br(),
        # html.Br(),
        # html.Button(id='sc',
        #             n_clicks=0, children = html.A('Schema Change',href='/schema-change/',style={'color':'#000000','fontSize':18,'fontWeight':'bold'}),
-       #             style={'padding-top':'5px','padding-bottom':'5px','color':'#008080','backgroundColor':'#F0FFF0','width':'300px','borderRadius':'4px'}),
+       #             style={'padding-top':'5px','padding-bottom':'5px','color':'#008080','backgroundColor':'#F8C471','width':'300px','borderRadius':'4px'}),
         html.Br(),
         html.Br(),
         html.Br(),
         html.Button(id='rdh',
                     n_clicks=0, children = html.A('Release History',href='/release-history/',style={'color':'#000000','fontSize':18,'fontWeight':'bold'}),
-                    style={'padding-top':'5px','padding-bottom':'5px','color':'#008080','backgroundColor':'#F0FFF0','width':'300px','borderRadius':'4px'}),
+                    style={'padding-top':'5px','padding-bottom':'5px','color':'#008080','backgroundColor':'#F8C471','width':'300px','borderRadius':'4px'}),
         ])
 
 oss_layout=html.Div([
@@ -100,13 +100,13 @@ oss_layout=html.Div([
         html.Br(),
         html.Button(id='rdh',
                     n_clicks=0, children = html.A('Release History',href='/release-history/',style={'color':'#000000','fontSize':18,'fontWeight':'bold'}),
-                    style={'padding-top':'5px','padding-bottom':'5px','color':'#008080','backgroundColor':'#F0FFF0','width':'300px','borderRadius':'4px'}),
+                    style={'padding-top':'5px','padding-bottom':'5px','color':'#008080','backgroundColor':'#F8C471','width':'300px','borderRadius':'4px'}),
         html.Br(),
         html.Br(),
         html.Br(),
         html.Button(id='sql',
                     n_clicks=0, children = html.A('SQL Table Revision',href='/table-revision/',style={'color':'#000000','fontSize':18,'fontWeight':'bold'}),
-                    style={'padding-top':'5px','padding-bottom':'5px','color':'#008080','backgroundColor':'#F0FFF0','width':'300px','borderRadius':'4px'}),
+                    style={'padding-top':'5px','padding-bottom':'5px','color':'#008080','backgroundColor':'#F8C471','width':'300px','borderRadius':'4px'}),
         ])
 @app.callback(Output("tab_content", "children"), [Input("tabs", "value")])
 def render_content(tab):
