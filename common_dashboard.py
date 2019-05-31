@@ -28,7 +28,7 @@ app.layout = html.Div([
         }
        ),
         html.Div([
-             html.H1(children='INNOVATION TOOLS',style={'textAlign': 'center','color': '#000000'})
+             html.H1(children='AD TOOLS',style={'textAlign': 'center','color': '#000000'})
            ],style={'padding-left':'340px','display':'inline-block','float':'left'}),
     #html.Br(),
         html.Img(
@@ -119,4 +119,3 @@ def render_content(tab):
 
 if __name__ == '__main__':
     server.run(debug=True)
-
